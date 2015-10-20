@@ -23,22 +23,24 @@
     	console.log(passArr)
     	console.log(passArr.length)
 
-    	if(passArr.length >= 2 && passPanduan()){
+    	if(passArr.length >= 4 && passPanduan()){
     		//div.style.display = "none";
     		document.body.removeChild(div)
     	}
     }
 
     function passPanduan(){
-    	if(passArr[0] == "3" && passArr[1] == "1"){
-    		return true
-    	}else{
-    		return false;
+
+    	var p = true;
+    	var pArr = ["3","6","9","8"];
+
+    	for(i=0;i<4;i++){
+    		if(passArr[i]!=pArr[i]){
+    			p = false;
+    		}
     	}
 
-    	
-    	
-
+    	return p;
     }
 
 
